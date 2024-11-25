@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000060;
+}
+
+table {
+    width: 80%; 
+    max-width: 1000px; 
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table td{
+    color: #000060;
+}
+
+table th{
+    background-color: #000060;
+    color: white;
+}
+
+table th, table td{
+    border: 1px solid #8b8b8b;
+    padding: 8px;
+    text-align: center;
+}
