@@ -17,6 +17,24 @@ echo '</pre>';
     <title>UOB Data API</title>
 </head>
 <body>
-    
+    <table class="striped">
+        <tr>
+            <th>Year</th>
+            <th>Semester</th>
+            <th>Program</th>
+            <th>Nationality</th>
+            <th>Number of students</th>
+        </tr>
+        <?php
+            foreach ($result['results'] as $rs):?>
+                <tr>
+                    <td> <?php echo $rs['year'];?></td>
+                    <td> <?php echo $rs['semester'];?></td>
+                    <td> <?php echo $rs['the_programs'];?></td>
+                    <td> <?php echo $rs['nationality'];?></td>
+                    <td> <?php echo $rs['number_of_students'];?></td>
+                </tr>
+            <?php endforeach;?>
+    </table>
 </body>
 </html>
