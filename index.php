@@ -9,6 +9,13 @@ $groupedData = [];
 foreach ($result['results'] as $rs) {
     $groupedData[$rs['year']][$rs['semester']][] = $rs;
 }
+// Function to sort rows by nationality
+function sortByNationality($a, $b) {
+    $order = ['Bahraini', 'GCC National', 'Other'];
+    $posA = array_search($a['nationality'], $order);
+    $posB = array_search($b['nationality'], $order);
+    return $posA - $posB;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,6 +46,7 @@ foreach ($result['results'] as $rs) {
             $yearRowCount = array_sum(array_map('count', $semesters));
             $yearPrinted = false;
             foreach ($semesters as $semester => $rows):
+                usort($rows, 'sortByNationality');
                 $semesterRowCount = count($rows);
                 foreach ($rows as $index => $rs):?>
                     <tr>
