@@ -31,6 +31,20 @@ table th{
 
 table th, table td{
     border: 1px solid #8b8b8b;
-    padding: 8px;
+    padding: 12px;
     text-align: center;
+}
+@media (max-width: 480px) {
+    table {
+        width: 100%;
+    }
+
+    table th, table td {
+        padding: 4px;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
 }
